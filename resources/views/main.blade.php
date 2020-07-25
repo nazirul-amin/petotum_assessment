@@ -199,6 +199,10 @@
                                                     <option value="Roboto">Roboto</option>
                                                     <option value="Verdana">Verdana</option>
                                                     <option value="Arial">Arial</option>
+                                                    <option value="Luminari">Luminari</option>
+                                                    <option value="Didot">Didot</option>
+                                                    <option value="fantasy">fantasy</option>
+                                                    <option value="Bookman">Bookman</option>
                                                 </select>
                                                 <div class="nice-select" tabindex="0">
                                                     <span class="current">{{$phrase->style}}</span>
@@ -206,6 +210,10 @@
                                                         <li data-value="Roboto" class="option {{ ($phrase->style == 'Roboto') ? 'selected focus' : ''}}">Roboto</li>
                                                         <li data-value="Verdana" class="option {{ ($phrase->style == 'Verdana') ? 'selected focus' : ''}}">Verdana</li>
                                                         <li data-value="Arial" class="option {{ ($phrase->style == 'Arial') ? 'selected focus' : ''}}">Arial</li>
+                                                        <li data-value="Luminari" class="option {{ ($phrase->style == 'Luminari') ? 'selected focus' : ''}}">Luminari</li>
+                                                        <li data-value="Didot" class="option {{ ($phrase->style == 'Didot') ? 'selected focus' : ''}}">Didot</li>
+                                                        <li data-value="fantasy" class="option {{ ($phrase->style == 'fantasy') ? 'selected focus' : ''}}">fantasy</li>
+                                                        <li data-value="Bookman" class="option {{ ($phrase->style == 'Bookman') ? 'selected focus' : ''}}">Bookman</li>
                                                     </ul>
                                                 </div>
                                             </div>
