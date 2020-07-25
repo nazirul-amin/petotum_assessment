@@ -22,9 +22,26 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+
     public function index()
     {
         $data['phrases'] = Phrase::get();
         return view('main', $data);
+    }
+    
+    public function changeStyle(request $request)
+    {
+        Phrase::updateOrCreate(
+            ['id'=>$request->id],
+            ['style'=>$request->data]
+        );
+    }
+
+    public function changeColor(request $request)
+    {
+        Phrase::updateOrCreate(
+            ['id'=>$request->id],
+            ['color'=>$request->data]
+        );
     }
 }

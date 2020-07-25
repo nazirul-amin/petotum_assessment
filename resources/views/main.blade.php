@@ -6,23 +6,18 @@
     <style>
         .bg-01 {
             background-color: #848ccf!important;
-            color: black;
         }
         .bg-02 {
             background-color: #be5683!important;
-            color: black;
         }
         .bg-03 {
             background-color: #cbeaed!important;
-            color: black;
         }
         .bg-04 {
             background-color: #ffe0f7!important;
-            color: black;
         }
         .bg-05 {
             background-color: #f9d56e!important;
-            color: black;
         }
         .phrase_container {
             position: relative;
@@ -31,7 +26,7 @@
             align-items: center;
             height: 100%;
             width: 100%;
-            font-size: 20px;
+            font-size: 25px;
         }
         .text-background {
             position: absolute;
@@ -94,7 +89,7 @@
                     </div>
                     <div class="col-xl-3 border border-black" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 100px;">
                         <div class="text-background">A2</div>
-                        <div id="phrase1" class="bg-01 phrase_container" draggable="true" ondragstart="drag(event)">
+                            <div id="phrase3" class="bg-01 phrase_container" draggable="true" ondragstart="drag(event)" style="font-family: {{ $phrases[2]->style }}; color: {{$phrases[2]->color}}">
                             <span>{{$phrases[2]->phrase}}</span>
                         </div>
                     </div>
@@ -103,7 +98,7 @@
                     </div>
                     <div class="col-xl-3 border border-black" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 100px;">
                         <div class="text-background">A4</div>
-                        <div id="phrase2" class="bg-02 phrase_container" draggable="true" ondragstart="drag(event)">
+                        <div id="phrase5" class="bg-02 phrase_container" draggable="true" ondragstart="drag(event)" style="font-family: {{ $phrases[4]->style }}; color: {{$phrases[4]->color}}">
                             <span>{{$phrases[4]->phrase}}</span>
                         </div>
                     </div>
@@ -115,7 +110,7 @@
                     </div>
                     <div class="col-xl-3 border border-black" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 100px;">
                         <div class="text-background">B3</div>
-                        <div id="phrase3" class="bg-03 phrase_container" draggable="true" ondragstart="drag(event)">
+                        <div id="phrase2" class="bg-03 phrase_container" draggable="true" ondragstart="drag(event)" style="font-family: {{ $phrases[1]->style }}; color: {{$phrases[1]->color}}">
                             <span>{{$phrases[1]->phrase}}</span>
                         </div>
                     </div>
@@ -124,7 +119,7 @@
                     </div>
                     <div class="col-xl-3 border border-black" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 100px;">
                         <div class="text-background">C1</div>
-                        <div id="phrase4" class="bg-04 phrase_container" draggable="true" ondragstart="drag(event)">
+                        <div id="phrase1" class="bg-04 phrase_container" draggable="true" ondragstart="drag(event)" style="font-family: {{ $phrases[0]->style }}; color: {{$phrases[0]->color}}">
                             <span>{{$phrases[0]->phrase}}</span>
                         </div>
                     </div>
@@ -148,7 +143,7 @@
                     </div>
                     <div class="col-xl-3 border border-black" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 100px;">
                         <div class="text-background">D4</div>
-                        <div id="phrase5" class="bg-05 phrase_container" draggable="true" ondragstart="drag(event)">
+                        <div id="phrase4" class="bg-05 phrase_container" draggable="true" ondragstart="drag(event)" style="font-family: {{ $phrases[3]->style }}; color: {{$phrases[3]->color}}">
                             <span>{{$phrases[3]->phrase}}</span>
                         </div>
                     </div>
@@ -178,7 +173,7 @@
                                     <div class="serial">Position</div>
                                 </div>
                                 @foreach($phrases as $key => $phrase)    
-                                    <div class="table-row">
+                                    <div id="{{$phrase->id}}" class="table-row">
                                         <div class="serial">{{$key+1}}</div>
                                         <div class="country">{{$phrase->phrase}}</div>
                                         <div class="visit">
@@ -186,7 +181,7 @@
                                                 <select name="font_color" style="display: none;">
                                                     <option value="Black">Black</option>
                                                     <option value="White">White</option>
-                                                    <option value="Red">Arial</option>
+                                                    <option value="Red">Red</option>
                                                 </select>
                                                 <div class="nice-select" tabindex="0">
                                                     <span class="current">{{$phrase->color}}</span>
@@ -243,6 +238,52 @@
             var data = ev.dataTransfer.getData("text");
             ev.target.appendChild(document.getElementById(data));
         }
+
+        $("select[name=font_style]").on('change', function() {
+            var phrase_style = $(this).val();
+            var phrase_id = $(this).closest('.table-row').attr('id');
+            $('#phrase'+phrase_id+'').css("font-family", $(this).val());
+            
+            $.ajax({
+                url:'{{Route("ChangeStyle")}}',
+                type:'post',
+                data: {
+                    "_token": "{{ csrf_token() }}",
+                    "id": phrase_id,
+                    "data": phrase_style
+                },
+                dataType:'json',
+                success:function(data) {
+                    console.log(data);
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log(jqXHR);
+                }
+            });
+        });
+
+        $("select[name=font_color]").on('change', function() {
+            var phrase_color = $(this).val();
+            var phrase_id = $(this).closest('.table-row').attr('id');
+            $('#phrase'+phrase_id+'').css("color", $(this).val());
+            
+            $.ajax({
+                url:'{{Route("ChangeColor")}}',
+                type:'post',
+                data: {
+                    "_token": "{{ csrf_token() }}",
+                    "id": phrase_id,
+                    "data": phrase_color
+                },
+                dataType:'json',
+                success:function(data) {
+                    console.log(data);
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log(jqXHR);
+                }
+            });
+        });
     </script>
 </body>
 </html>
