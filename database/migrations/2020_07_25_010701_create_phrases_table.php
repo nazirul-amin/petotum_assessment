@@ -19,6 +19,7 @@ class CreatePhrasesTable extends Migration
             $table->string('style');
             $table->string('color');
             $table->string('position');
+            $table->string('background');
             $table->timestamps();
         });
     }

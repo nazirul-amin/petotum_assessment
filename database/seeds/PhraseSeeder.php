@@ -16,31 +16,36 @@ class PhraseSeeder extends Seeder
                 'phrase' => 'Pet parent dashboard',
                 'style' => 'Roboto',
                 'color' => 'Black',
-                'position' => 'C1'
+                'position' => 'C1',
+                'background' => '#848ccf'
             ],
             [
                 'phrase' => 'Pet care dashboard',
                 'style' => 'Roboto',
                 'color' => 'Black',
-                'position' => 'B3'
+                'position' => 'B3',
+                'background' => '#be5683'
             ],
             [
                 'phrase' => 'petotum.com',
                 'style' => 'Roboto',
                 'color' => 'Black',
-                'position' => 'A2'
+                'position' => 'A2',
+                'background' => '#cbeaed'
             ],
             [
                 'phrase' => 'Provide Transparency',
                 'style' => 'Roboto',
                 'color' => 'Black',
-                'position' => 'D4'
+                'position' => 'D4',
+                'background' => '#ffe0f7'
             ],
             [
                 'phrase' => 'Built Trust',
                 'style' => 'Roboto',
                 'color' => 'Black',
-                'position' => 'A4'
+                'position' => 'A4',
+                'background' => '#f9d56e'
             ],
         ]);
     }

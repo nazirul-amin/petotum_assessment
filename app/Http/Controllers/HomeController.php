@@ -28,6 +28,12 @@ class HomeController extends Controller
         $data['phrases'] = Phrase::get();
         return view('main', $data);
     }
+
+    public function getPhrases()
+    {
+        $data = Phrase::get();
+        return json_encode($data);
+    }
     
     public function changeStyle(request $request)
     {
