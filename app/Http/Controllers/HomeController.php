@@ -44,4 +44,12 @@ class HomeController extends Controller
             ['color'=>$request->data]
         );
     }
+
+    public function changePosition(request $request)
+    {
+        Phrase::updateOrCreate(
+            ['id'=>$request->id],
+            ['position'=>$request->data]
+        );
+    }
 }

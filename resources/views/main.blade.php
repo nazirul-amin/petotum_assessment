@@ -84,64 +84,64 @@
         <div class="row justify-content-center mt-5 mb-5">
             <div class="col-xl-8">
                 <div class="row">
-                    <div class="col-xl-3 border border-black" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 100px;">
+                    <div id="A1" class="col-xl-3 border border-black" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 100px;">
                         <div class="text-background">A1</div>
                     </div>
-                    <div class="col-xl-3 border border-black" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 100px;">
+                    <div id="A2" class="col-xl-3 border border-black" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 100px;">
                         <div class="text-background">A2</div>
-                            <div id="phrase3" class="bg-01 phrase_container" draggable="true" ondragstart="drag(event)" style="font-family: {{ $phrases[2]->style }}; color: {{$phrases[2]->color}}">
+                        <div id="phrase3" class="bg-01 phrase_container" draggable="true" ondragstart="drag(event)" style="font-family: {{ $phrases[2]->style }}; color: {{$phrases[2]->color}}">
                             <span>{{$phrases[2]->phrase}}</span>
                         </div>
                     </div>
-                    <div class="col-xl-3 border border-black" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 100px;">
+                    <div id="A3" class="col-xl-3 border border-black" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 100px;">
                         <div class="text-background">A3</div>
                     </div>
-                    <div class="col-xl-3 border border-black" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 100px;">
+                    <div id="A4" class="col-xl-3 border border-black" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 100px;">
                         <div class="text-background">A4</div>
                         <div id="phrase5" class="bg-02 phrase_container" draggable="true" ondragstart="drag(event)" style="font-family: {{ $phrases[4]->style }}; color: {{$phrases[4]->color}}">
                             <span>{{$phrases[4]->phrase}}</span>
                         </div>
                     </div>
-                    <div class="col-xl-3 border border-black" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 100px;">
+                    <div id="B1" class="col-xl-3 border border-black" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 100px;">
                         <div class="text-background">B1</div>
                     </div>
-                    <div class="col-xl-3 border border-black" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 100px;">
+                    <div id="B2" class="col-xl-3 border border-black" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 100px;">
                         <div class="text-background">B2</div>
                     </div>
-                    <div class="col-xl-3 border border-black" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 100px;">
+                    <div id="B3" class="col-xl-3 border border-black" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 100px;">
                         <div class="text-background">B3</div>
                         <div id="phrase2" class="bg-03 phrase_container" draggable="true" ondragstart="drag(event)" style="font-family: {{ $phrases[1]->style }}; color: {{$phrases[1]->color}}">
                             <span>{{$phrases[1]->phrase}}</span>
                         </div>
                     </div>
-                    <div class="col-xl-3 border border-black" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 100px;">
+                    <div id="B4" class="col-xl-3 border border-black" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 100px;">
                         <div class="text-background">B4</div>
                     </div>
-                    <div class="col-xl-3 border border-black" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 100px;">
+                    <div id="C1" class="col-xl-3 border border-black" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 100px;">
                         <div class="text-background">C1</div>
                         <div id="phrase1" class="bg-04 phrase_container" draggable="true" ondragstart="drag(event)" style="font-family: {{ $phrases[0]->style }}; color: {{$phrases[0]->color}}">
                             <span>{{$phrases[0]->phrase}}</span>
                         </div>
                     </div>
-                    <div class="col-xl-3 border border-black" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 100px;">
+                    <div id="C2" class="col-xl-3 border border-black" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 100px;">
                         <div class="text-background">C2</div>
                     </div>
-                    <div class="col-xl-3 border border-black" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 100px;">
+                    <div id="C3" class="col-xl-3 border border-black" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 100px;">
                         <div class="text-background">C3</div>
                     </div>
-                    <div class="col-xl-3 border border-black" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 100px;">
+                    <div id="C4" class="col-xl-3 border border-black" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 100px;">
                         <div class="text-background">C4</div>
                     </div>
-                    <div class="col-xl-3 border border-black" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 100px;">
+                    <div id="D1" class="col-xl-3 border border-black" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 100px;">
                         <div class="text-background">D1</div>
                     </div>
-                    <div class="col-xl-3 border border-black" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 100px;">
+                    <div id="D2" class="col-xl-3 border border-black" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 100px;">
                         <div class="text-background">D2</div>
                     </div>
-                    <div class="col-xl-3 border border-black" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 100px;">
+                    <div id="D3" class="col-xl-3 border border-black" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 100px;">
                         <div class="text-background">D3</div>
                     </div>
-                    <div class="col-xl-3 border border-black" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 100px;">
+                    <div id="D4" class="col-xl-3 border border-black" ondrop="drop(event)" ondragover="allowDrop(event)" style="min-height: 100px;">
                         <div class="text-background">D4</div>
                         <div id="phrase4" class="bg-05 phrase_container" draggable="true" ondragstart="drag(event)" style="font-family: {{ $phrases[3]->style }}; color: {{$phrases[3]->color}}">
                             <span>{{$phrases[3]->phrase}}</span>
@@ -210,7 +210,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="serial">{{$phrase->position}}</div>
+                                        <div id="position_row{{$phrase->id}}" class="serial">{{$phrase->position}}</div>
                                     </div>
                                 @endforeach
                             </div>
@@ -237,6 +237,26 @@
             ev.preventDefault();
             var data = ev.dataTransfer.getData("text");
             ev.target.appendChild(document.getElementById(data));
+            var phrase_id = data.replace("phrase", "");
+            var position_id = ev.target.id;
+            $("#position_row"+phrase_id+"").html(position_id);
+            
+            $.ajax({
+                url:'{{Route("ChangePosition")}}',
+                type:'post',
+                data: {
+                    "_token": "{{ csrf_token() }}",
+                    "id": phrase_id,
+                    "data": position_id
+                },
+                dataType:'json',
+                success:function(data) {
+                    console.log(data);
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log(jqXHR);
+                }
+            });
         }
 
         $("select[name=font_style]").on('change', function() {

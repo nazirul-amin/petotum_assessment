@@ -22,3 +22,4 @@ Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
 Route::post('/changeStyle', 'HomeController@changeStyle')->name('ChangeStyle');
 Route::post('/changeColor', 'HomeController@changeColor')->name('ChangeColor');
+Route::post('/changePosition', 'HomeController@changePosition')->name('ChangePosition');
