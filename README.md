@@ -5,7 +5,7 @@
 - copy .env.example and rename to .env
 - run php artisan key:generate
 
-once db configuration done
+create empty and configure in .env file. Then,
 - run php artisan migrate
 - run php artisan db:seed
 
